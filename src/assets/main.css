@@ -1,39 +1,65 @@
-@import './base.css';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
-
-@media (hover: hover) {
+/* for the hover on full screen */
+/* @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
   }
+} */
+* {
+  scroll-behavior: smooth;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+body {
+  margin: 0;
+  background-image: url('@/assets/background.jpg');
+  background-repeat: repeat-y; /* Repeat vertically */
+  background-size: 100% auto; /* Set width to 100% and height to auto */
+  background-position: center; /* Adjust as needed */
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+h1 {
+  font-weight: bold;
+  font-size: 80px;
+  color: #a37cf0;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: xx-large;
+  color: black;
+}
+
+h5 {
+  color:#a37cf0;
+  font-size: large;
+  font-weight: 600;
+}
+
+.line hr {
+  border: none;
+  height: 4px;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.pictureHero { 
+  box-shadow: 0 0 13px #a37cf0;
+  border-radius: 6px;
+}
+
+@media (max-width:800px) {
+  h1 {
+    font-size: 40px;
+  }
+  h5 {
+    font-size: medium;
+  }
+  h2 {
+    font-size: x-large;
   }
 }
+
